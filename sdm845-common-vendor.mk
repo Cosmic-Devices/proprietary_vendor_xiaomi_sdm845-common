@@ -148,4 +148,6 @@ PRODUCT_PACKAGES += \
     dpmserviceapp \
     ims \
     qcrilmsgtunnel \
-    chargeonlymode
+    chargeonlymode \
+    HotwordEnrollmentOKGoogleWCD9340 \
+    HotwordEnrollmentXGoogleWCD9340
