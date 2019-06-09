@@ -1,4 +1,4 @@
-# Copyright (C) 2018-2019 AOSiP
+# Copyright (C) 2018-2019 The Potato Open Sauce Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -112,28 +112,6 @@ LOCAL_PRIVILEGED_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := chargeonlymode
-LOCAL_MODULE_OWNER := xiaomi
-LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT_SBIN)
-LOCAL_UNSTRIPPED_PATH := $(TARGET_ROOT_OUT_SBIN_UNSTRIPPED)
-LOCAL_SRC_FILES := proprietary/rootfs/sbin/chargeonlymode
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := EXECUTABLES
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := HotwordEnrollmentOKGoogleWCD9340
-LOCAL_MODULE_OWNER := xiaomi
-LOCAL_SRC_FILES := proprietary/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PRIVILEGED_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE := WfdCommon
 LOCAL_MODULE_OWNER := xiaomi
 LOCAL_SRC_FILES := proprietary/framework/WfdCommon.jar
@@ -144,15 +122,13 @@ LOCAL_MODULE_SUFFIX := .jar
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := HotwordEnrollmentXGoogleWCD9340
+LOCAL_MODULE := chargeonlymode
 LOCAL_MODULE_OWNER := xiaomi
-LOCAL_SRC_FILES := proprietary/priv-app/HotwordEnrollmentXGoogleWCD9340/HotwordEnrollmentXGoogleWCD9340.apk
-LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT_SBIN)
+LOCAL_UNSTRIPPED_PATH := $(TARGET_ROOT_OUT_SBIN_UNSTRIPPED)
+LOCAL_SRC_FILES := proprietary/rootfs/sbin/chargeonlymode
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PRIVILEGED_MODULE := true
+LOCAL_MODULE_CLASS := EXECUTABLES
 include $(BUILD_PREBUILT)
 
 endif

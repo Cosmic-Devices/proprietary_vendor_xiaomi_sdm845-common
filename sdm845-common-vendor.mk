@@ -1,4 +1,4 @@
-# Copyright (C) 2018-2019 AOSiP
+# Copyright (C) 2018-2019 The Potato Open Sauce Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
 
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm845-common/proprietary/bin/dpmd:system/bin/dpmd \
+    vendor/xiaomi/sdm845-common/proprietary/bin/wfdservice:system/bin/wfdservice \
     vendor/xiaomi/sdm845-common/proprietary/etc/dpm/dpm.conf:system/etc/dpm/dpm.conf \
     vendor/xiaomi/sdm845-common/proprietary/etc/init/dpmd.rc:system/etc/init/dpmd.rc \
-    vendor/xiaomi/sdm845-common/proprietary/bin/wfdservice:system/bin/wfdservice \
     vendor/xiaomi/sdm845-common/proprietary/etc/init/wfdservice.rc:system/etc/init/wfdservice.rc \
     vendor/xiaomi/sdm845-common/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
     vendor/xiaomi/sdm845-common/proprietary/etc/permissions/com.qti.dpmframework.xml:system/etc/permissions/com.qti.dpmframework.xml \
@@ -102,8 +102,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm845-common/proprietary/lib/vendor.qti.ims.rcsconfig@1.0.so:system/lib/vendor.qti.ims.rcsconfig@1.0.so \
     vendor/xiaomi/sdm845-common/proprietary/lib/vendor.qti.imsrtpservice@1.0.so:system/lib/vendor.qti.imsrtpservice@1.0.so \
     vendor/xiaomi/sdm845-common/proprietary/lib/vendor.qti.latency@2.0.so:system/lib/vendor.qti.latency@2.0.so \
-    vendor/xiaomi/sdm845-common/proprietary/lib/vendor.xiaomi.hardware.citsensorservice@1.0.so:system/lib/vendor.xiaomi.hardware.citsensorservice@1.0.so \
-    vendor/xiaomi/sdm845-common/proprietary/lib/vendor.xiaomi.hardware.citsensorservice@1.1.so:system/lib/vendor.xiaomi.hardware.citsensorservice@1.1.so \
     vendor/xiaomi/sdm845-common/proprietary/lib/vendor.xiaomi.hardware.mtdservice@1.0.so:system/lib/vendor.xiaomi.hardware.mtdservice@1.0.so \
     vendor/xiaomi/sdm845-common/proprietary/lib/vendor.xiaomi.hardware.vsimapp@1.0.so:system/lib/vendor.xiaomi.hardware.vsimapp@1.0.so \
     vendor/xiaomi/sdm845-common/proprietary/lib64/com.qualcomm.qti.dpm.api@1.0.so:system/lib64/com.qualcomm.qti.dpm.api@1.0.so \
@@ -134,6 +132,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm845-common/proprietary/lib64/libmmrtpencoder.so:system/lib64/libmmrtpencoder.so \
     vendor/xiaomi/sdm845-common/proprietary/lib64/libqdMetaData.system.so:system/lib64/libqdMetaData.system.so \
     vendor/xiaomi/sdm845-common/proprietary/lib64/librcc.so:system/lib64/librcc.so \
+    vendor/xiaomi/sdm845-common/proprietary/lib64/libsdm-disp-apis.so:system/lib64/libsdm-disp-apis.so \
     vendor/xiaomi/sdm845-common/proprietary/lib64/libwfdclient.so:system/lib64/libwfdclient.so \
     vendor/xiaomi/sdm845-common/proprietary/lib64/libwfdnative.so:system/lib64/libwfdnative.so \
     vendor/xiaomi/sdm845-common/proprietary/lib64/vendor.qti.hardware.data.latency@1.0.so:system/lib64/vendor.qti.hardware.data.latency@1.0.so \
@@ -173,7 +172,5 @@ PRODUCT_PACKAGES += \
     dpmserviceapp \
     ims \
     qcrilmsgtunnel \
-    chargeonlymode \
-    HotwordEnrollmentOKGoogleWCD9340 \
-    HotwordEnrollmentXGoogleWCD9340 \
-    WfdCommon
+    WfdCommon \
+    chargeonlymode
